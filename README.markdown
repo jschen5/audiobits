@@ -13,21 +13,25 @@ sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm
 ```
-
-Build Project
-=============
-1. Clone repository:
+Get the Code
+============
+Clone the repository:
 ```
 "git clone git@github.com:jschen5/audiobits.git audiobits"
 ```
-2. Run ```activator``` (this will take awhile to download the necessary dependencies)
+
+Build Play Project
+==================
+1. Run ```activator``` (this will take awhile to download the necessary dependencies)
 ** You should now be in the Play/Activator console (if not, run "activator" again)
-3. Run ```run``` (this will also install some dependencies)
+2. Run ```run``` (this will also install some dependencies)
 
 (If you encounter a Kernel inotify watch limit reached error, check out this helpful post: http://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached)
 
 ** At this point, the server should be running on 0.0.0.0:9000
 
+Build Js and Less
+====================
 4. Install the necessary node modules by running:
 ```
 npm install
