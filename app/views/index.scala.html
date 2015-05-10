@@ -1,0 +1,25 @@
+@*
+@(message: String)
+
+@main("Welcome to Play") {
+
+    @play20.welcome(message)
+
+}
+*@
+
+@(title: String)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("css/bundle.css")">
+        @*<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">*@
+    </head>
+    <body>
+        <div id="audiobits-app"></div>
+        <script src="@routes.Assets.at("js/bundle.js")" type="text/javascript"></script>
+    </body>
+</html>
