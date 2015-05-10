@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Example Flux architecture.",
   "repository": "https://github.com/facebook/flux",
-  "main": "js/app.js",
+  "main": "app/assets/app.js",
   "dependencies": {
     "flux": "^2.0.1",
     "keymirror": "~0.1.0",
@@ -21,11 +21,11 @@
     "catw": "^1.0.0"
   },
   "scripts": {
-    "watch-css": "catw -c 'lessc -' 'css/*.less' -o css/bundle.css -v",
-    "watch-js": "watchify -o js/bundle.js -v -d js/app.js",
-    "watch": "npm run watch-css & npm run watch-js",
-    "build-css": "catw -c 'lessc -' 'css/*.less' > css/bundle.css",
-    "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > js/bundle.min.js",
+    "watch-css": "catw -c 'lessc -' 'app/assets/css/*.less' -o public/css/bundle.css -v",
+    "watch-js": "watchify -o public/js/bundle.js -v -d app/assets/js/app.js",
+    "watch": "npm run watch-css && npm run watch-js",
+    "build-css": "catw -c 'lessc -' 'app/assets/css/*.less' > public/css/bundle.css",
+    "build-js": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > public/js/bundle.min.js",
     "build": "npm run build-css && npm run build-js",
     "test": "jest"
   },
@@ -37,6 +37,6 @@
     ]
   },
   "jest": {
-    "rootDir": "./js"
+    "rootDir": "./app/assets/js"
   }
 }
