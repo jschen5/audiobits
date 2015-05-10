@@ -28,7 +28,7 @@ Build Play Project
 
 (If you encounter a Kernel inotify watch limit reached error, check out this helpful post: http://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached)
 
-** At this point, the server should be running on 0.0.0.0:9000
+At this point, the server should be running on 0.0.0.0:9000
 
 Build Js and Less
 ====================
