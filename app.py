@@ -13,9 +13,5 @@ def send_js(path):
 def send_css(path):
   return send_from_directory('css', path)
 
-@app.route('/todomvc-common/<path:path>')
-def send_common(path):
-  return send_from_directory('todomvc-common', path)
-
 if __name__ == '__main__':
     app.run('0.0.0.0', debug=True)
