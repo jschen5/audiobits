@@ -20,11 +20,14 @@ Build Project
 ```
 "git clone git@github.com:jschen5/audiobits.git audiobits"
 ```
-2. Run "activator" (this will take awhile to download the necessary dependencies)
+2. Run ```activator``` (this will take awhile to download the necessary dependencies)
 ** You should now be in the Play/Activator console (if not, run "activator" again)
-3. Run "run" (this will also install some dependencies)
+3. Run ```run``` (this will also install some dependencies)
+
 (If you encounter a Kernel inotify watch limit reached error, check out this helpful post: http://unix.stackexchange.com/questions/13751/kernel-inotify-watch-limit-reached)
+
 ** At this point, the server should be running on 0.0.0.0:9000
+
 4. Install the necessary node modules by running:
 ```
 npm install
