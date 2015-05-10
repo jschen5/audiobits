@@ -17,7 +17,7 @@ Get the Code
 ============
 Clone the repository:
 ```
-"git clone git@github.com:jschen5/audiobits.git audiobits"
+git clone git@github.com:jschen5/audiobits.git audiobits
 ```
 
 Build Play Project
