@@ -2,3 +2,5 @@
 /venv
 /js/bundle.js
 /js/bundle.min.js
+/css/bundle.css
+/css/.bundle.css-*

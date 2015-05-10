@@ -8,7 +8,8 @@
     "flux": "^2.0.1",
     "keymirror": "~0.1.0",
     "object-assign": "^1.0.0",
-    "react": "^0.12.0"
+    "react": "^0.12.0",
+    "less": "^2.5.0"
   },
   "devDependencies": {
     "browserify": "^6.2.0",
@@ -16,11 +17,16 @@
     "jest-cli": "~0.1.17",
     "reactify": "^0.15.2",
     "uglify-js": "~2.4.15",
-    "watchify": "^2.1.1"
+    "watchify": "^2.1.1",
+    "catw": "^1.0.0"
   },
   "scripts": {
-    "start": "watchify -o js/bundle.js -v -d js/app.js",
+    "watch-css": "catw -c 'lessc -' 'css/*.less' -o css/bundle.css -v",
+    "watch-js": "watchify -o js/bundle.js -v -d js/app.js",
+    "watch": "npm run watch-css & npm run watch-js",
+    "build-css": "catw -c 'lessc -' 'css/*.less' > css/bundle.css",
     "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > js/bundle.min.js",
+    "build": "npm run build-css && npm run build-js",
     "test": "jest"
   },
   "author": "Bill Fisher",
